@@ -1,7 +1,7 @@
 package ch5_1018;
 
 public class Student {
-	int stuNo; // 1번
+	static int stuNo; // 1번
 	String stuName; // 이상용
 	String stuClass; // 402호
 	String stuHome; // 부산 강서구
@@ -36,7 +36,7 @@ public class Student {
 	}
 	
 	public void studySub(String stuName) {
-		System.out.println(stuName +"자바 공부중.");
+		System.out.println(stuName +" 자바 공부중.");
 	}
 	
 	
@@ -48,14 +48,14 @@ public class Student {
 		
 		
 		Student lsy = new Student();
-		lsy.stuNo = 1;
+		Student.stuNo = 1;
 		lsy.stuName = "이상용";
-		lsy.studySub("이상용"); 
+		lsy.studySub("이상용은"); 
 		System.out.println("해당 학생증 번호를 get 메서드를 통해서 접근해서 출력");
-		System.out.println(lsy.getStuNo());
+		lsy.setStuNo(3);
 		System.out.println("해당 학생증 번호를 직접 접근해서 출력");
-		System.out.println(lsy.stuNo);
-//		System.out.println(lsy.studySub);
+		System.out.println(Student.stuNo);
+		
 		
 		Student lsy2 = new Student(); // 이상용2 번 학생의 학생 번호를 번을 set 메서드를 통해서 지정.
 		lsy2.setStuNo(2);
